@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Task</title>
+</head>
+
+<body>
+    <h2>Add Task</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Title:</label><br>
+        <input type="text" name="title" id="title" required><br>
+        <label for="description">Description:</label><br>
+        <textarea name="description" id="description"></textarea><br>
+        <button type="submit">Add Task</button>
+    </form>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+
+</html>
